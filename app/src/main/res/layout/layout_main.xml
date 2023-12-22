@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/my_black"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/mainTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:text="@string/main_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            android:textColor="@color/my_green" />
+
+        <TextView
+            android:id="@+id/mainResponseTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mainTitle"
+            android:layout_alignParentTop="false"
+            android:gravity="center"
+            android:text="@string/main_response_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/my_green" />
+
+        <TextView
+            android:id="@+id/mainResponseText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/mainSendTitle"
+            android:layout_below="@id/mainResponseTitle"
+            android:text="@string/main_console"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/my_green" />
+
+        <TextView
+            android:id="@+id/mainSendTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/editSendText"
+            android:layout_alignParentTop="false"
+            android:gravity="center"
+            android:text="@string/main_send_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/my_green" />
+
+        <EditText
+            android:id="@+id/editSendText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/mainSendButton"
+            android:height="200dp"
+            android:background="@color/my_white"
+            android:ems="10"
+            android:hint="@string/main_send_text"
+            android:inputType="text"
+            android:textAlignment="viewStart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+        <ImageButton
+            android:id="@+id/mainSendButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/button_small_send"
+            android:contentDescription="@string/main_send_button_description" />
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

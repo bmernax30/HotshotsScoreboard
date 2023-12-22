@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">HotshotsScoreboard</string>
+    <!--Main Layout Strings-->
+    <string name="main_title">REST API</string>
+    <string name="main_send_button_description">Send</string>
+    <string name="main_console">/></string>
+    <string name="main_response_title">Response from web:</string>
+    <string name="main_send_title">Send to web:</string>
+    <string name="main_send_text">Type text here...</string>
+</resources>
