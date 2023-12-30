@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <TextView
+            android:id="@+id/settingsHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/settings_header"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/settingsTeamInputs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/settingsHeader"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/settingsTeam1Header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/settings_team1_header"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@color/white" />
+
+            <EditText
+                android:id="@+id/settingsInputTeam1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/input_team1_boarder"
+                android:ems="10"
+                android:inputType="text"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/settingsTeam2Header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/settings_team2_header"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@color/white" />
+
+            <EditText
+                android:id="@+id/settingsInputTeam2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/input_team2_boarder"
+                android:ems="10"
+                android:inputType="text"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/settingCourtSelection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:background="@android:drawable/btn_dropdown" />
+
+        <ImageButton
+            android:id="@+id/settingsEnterTeamNames"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/button_small_save" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,80 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/my_black"
-        android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:background="@color/black"
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/mainTitle"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:gravity="center"
-            android:text="@string/main_title"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-            android:textColor="@color/my_green" />
+            android:layout_height="match_parent"
+            android:layout_weight="5">
 
-        <TextView
-            android:id="@+id/mainResponseTitle"
+            <TextView
+                android:id="@+id/mainTeam1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_weight="1"
+                android:background="@color/black"
+                android:gravity="center_horizontal|top"
+                android:text="@string/team1_default"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/mainGameNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@color/black"
+                android:text="@string/settings_game_default"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/mainTeam2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_weight="1"
+                android:background="@color/black"
+                android:gravity="center_horizontal|top"
+                android:text="@string/team2_default"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            <ImageButton
+                android:id="@+id/mainScore1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_weight="1"
+                android:background="@drawable/red_0" />
+
+            <ImageButton
+                android:id="@+id/mainScore2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_weight="1"
+                android:background="@drawable/blue_0" />
+        </RelativeLayout>
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/mainTitle"
-            android:layout_alignParentTop="false"
-            android:gravity="center"
-            android:text="@string/main_response_title"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="@color/my_green" />
+            android:layout_height="match_parent"
+            android:layout_weight="5">
 
-        <TextView
-            android:id="@+id/mainResponseText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@id/mainSendTitle"
-            android:layout_below="@id/mainResponseTitle"
-            android:text="@string/main_console"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="@color/my_green" />
+            <ImageButton
+                android:id="@+id/mainSwitchButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/switch_scores" />
 
-        <TextView
-            android:id="@+id/mainSendTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@id/editSendText"
-            android:layout_alignParentTop="false"
-            android:gravity="center"
-            android:text="@string/main_send_title"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="@color/my_green" />
+            <ImageButton
+                android:id="@+id/mainClearButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/mainSwitchButton"
+                android:background="@drawable/clear" />
 
-        <EditText
-            android:id="@+id/editSendText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@id/mainSendButton"
-            android:height="200dp"
-            android:background="@color/my_white"
-            android:ems="10"
-            android:hint="@string/main_send_text"
-            android:inputType="text"
-            android:textAlignment="viewStart"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+            <ImageButton
+                android:id="@+id/mainSettingsButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/mainClearButton"
+                android:background="@drawable/settings" />
 
-        <ImageButton
-            android:id="@+id/mainSendButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            <TextView
+                android:id="@+id/mainSettingsCourt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="@string/settings_court_default"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                android:textColor="@color/white" />
+        </RelativeLayout>
 
-            android:layout_alignParentBottom="true"
-            android:background="@drawable/button_small_send"
-            android:contentDescription="@string/main_send_button_description" />
+    </LinearLayout>
 
-    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

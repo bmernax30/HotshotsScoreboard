@@ -2,9 +2,34 @@
     <string name="app_name">HotshotsScoreboard</string>
     <!--Main Layout Strings-->
     <string name="main_title">REST API</string>
-    <string name="main_send_button_description">Send</string>
-    <string name="main_console">/></string>
-    <string name="main_response_title">Response from web:</string>
-    <string name="main_send_title">Send to web:</string>
-    <string name="main_send_text">Type text here...</string>
+    <string name="score1_description">Score for Team 1</string>
+    <string name="score2_description">Score for Team 2</string>
+    <string name="team1_default">Team 1</string>
+    <string name="team2_default">Team 2</string>
+    <string name="score1_increase_description">Increase score Team 1</string>
+    <string name="score1_decrease_description">Decrease score Team 1</string>
+    <string name="score2_increase_description">Increase score Team 2</string>
+    <string name="score2_decrease_description">Decrease score Team 2</string>
+    <string name="main_court_b">Court B</string>
+    <string name="main_court_c">Court C</string>
+    <string name="main_court_d">Court D</string>
+    <string name="main_court_e">Court E</string>
+    <string name="main_court_f">Court F</string>
+    <string name="main_game_1">Game 1</string>
+    <string name="main_game_2">Game 2</string>
+    <string name="main_game_3">Game 3</string>
+
+    <!--Settings Layout Strings-->
+    <string name="settings_header">SETTINGS</string>
+    <string name="settings_team1_header">TEAM 1 NAME</string>
+    <string name="settings_team2_header">TEAM 2 NAME</string>
+    <string name="settings_court_default">Court B</string>
+    <string name="settings_game_default">Game 1</string>
+
+    <!--SignIn Layout Strings-->
+    <string name="signin_header">HOTSHOTS SCOREBOARD</string>
+    <string name="signin_name_header">USERNAME</string>
+    <string name="signin_password_header">PASSWORD</string>
+
+
 </resources>
